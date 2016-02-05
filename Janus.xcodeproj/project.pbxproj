@@ -10,8 +10,8 @@
 		19D48E631C1661FF00E58B73 /* Janus.h in Headers */ = {isa = PBXBuildFile; fileRef = 19D48E621C1661FF00E58B73 /* Janus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19D48E6A1C1661FF00E58B73 /* Janus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D48E5F1C1661FF00E58B73 /* Janus.framework */; };
 		19D48E6F1C1661FF00E58B73 /* JanusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D48E6E1C1661FF00E58B73 /* JanusTests.swift */; };
-		19E155941C1662770083852A /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E155921C1662770083852A /* JSONParser.swift */; };
-		19E155951C1662770083852A /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E155931C1662770083852A /* JSONValue.swift */; };
+		4308898B1C653941005A3894 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430889891C653941005A3894 /* JSONParser.swift */; };
+		4308898C1C653941005A3894 /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308898A1C653941005A3894 /* JSONValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +31,8 @@
 		19D48E691C1661FF00E58B73 /* JanusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JanusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D48E6E1C1661FF00E58B73 /* JanusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JanusTests.swift; sourceTree = "<group>"; };
 		19D48E701C1661FF00E58B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19E155921C1662770083852A /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
-		19E155931C1662770083852A /* JSONValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
+		430889891C653941005A3894 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONParser.swift; path = Sources/JSONParser.swift; sourceTree = SOURCE_ROOT; };
+		4308898A1C653941005A3894 /* JSONValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONValue.swift; path = Sources/JSONValue.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +75,8 @@
 		19D48E611C1661FF00E58B73 /* Janus */ = {
 			isa = PBXGroup;
 			children = (
-				19E155921C1662770083852A /* JSONParser.swift */,
-				19E155931C1662770083852A /* JSONValue.swift */,
+				430889891C653941005A3894 /* JSONParser.swift */,
+				4308898A1C653941005A3894 /* JSONValue.swift */,
 				19D48E621C1661FF00E58B73 /* Janus.h */,
 				19D48E641C1661FF00E58B73 /* Info.plist */,
 			);
@@ -148,7 +148,7 @@
 		19D48E561C1661FF00E58B73 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = nkirby;
 				TargetAttributes = {
@@ -200,8 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19E155941C1662770083852A /* JSONParser.swift in Sources */,
-				19E155951C1662770083852A /* JSONValue.swift in Sources */,
+				4308898B1C653941005A3894 /* JSONParser.swift in Sources */,
+				4308898C1C653941005A3894 /* JSONValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

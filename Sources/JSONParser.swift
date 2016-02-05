@@ -20,7 +20,7 @@ public class JSONParser {
     public static func model<T: JSONDecodable>(type: T.Type) -> JSONTarget<T> {
         return JSONTarget<T>()
     }
-    
+
     public static func models<T: JSONDecodable>(type: T.Type) -> JSONTarget<T> {
         return JSONTarget<T>()
     }
@@ -32,7 +32,7 @@ public class JSONTarget<T: JSONDecodable> {
     public func from(dict: JSONDictionary) -> T? {
         return T(json: JSONValue(value: dict))
     }
-    
+
     public func from(arr: JSONArray) -> [T]? {
         var models = [T]()
         for dict in arr {
@@ -40,7 +40,7 @@ public class JSONTarget<T: JSONDecodable> {
                 models.append(model)
             }
         }
-        
+
         return models
     }
 }
