@@ -17,17 +17,30 @@ public protocol JSONDecodable {
 // =======================================================
 
 public class JSONParser {
-    public static func model<T: JSONDecodable>(dict: JSONDictionary, ofType type: T.Type) -> T? {
+    public static func model<T: JSONDecodable>(type: T.Type) -> JSONTarget<T> {
+        return JSONTarget<T>()
+    }
+
+    public static func models<T: JSONDecodable>(type: T.Type) -> JSONTarget<T> {
+        return JSONTarget<T>()
+    }
+}
+
+// =======================================================
+
+public class JSONTarget<T: JSONDecodable> {
+    public func from(dict: JSONDictionary) -> T? {
         return T(json: JSONValue(value: dict))
     }
-    
-    public static func models<T: JSONDecodable>(arr: JSONArray, ofType type: T.Type) -> [T]? {
+
+    public func from(arr: JSONArray) -> [T]? {
         var models = [T]()
         for dict in arr {
-            if let model = self.model(dict, ofType: type) {
+            if let model = self.from(dict) {
                 models.append(model)
             }
         }
+
         return models
     }
 }
