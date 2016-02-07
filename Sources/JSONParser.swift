@@ -38,7 +38,7 @@ public class JSONTarget<T: JSONDecodable> {
         for (key, value) in dict {
             convertedDict[key] = NSString(string: value)
         }
-        return T(json: JSONValue(value: dict))
+        return T(json: JSONValue(value: convertedDict))
     }
 
     public func from(arr: JSONArray) -> [T]? {
