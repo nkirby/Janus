@@ -33,14 +33,14 @@ public class JSONTarget<T: JSONDecodable> {
         return T(json: JSONValue(value: dict))
     }
 
-    public func from(dict: [String: String]) {
+    public func from(strings dict: [String: String]) {
         var convertedDict = [String: AnyObject]()
         for (key, value) in dict {
             convertedDict[key] = NSString(string: value)
         }
-        return self.from(convertedDict)
+        return T(json: JSONValue(value: dict))
     }
-    
+
     public func from(arr: JSONArray) -> [T]? {
         var models = [T]()
         for dict in arr {
